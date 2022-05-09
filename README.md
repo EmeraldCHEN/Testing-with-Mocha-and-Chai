@@ -3,4 +3,10 @@
  
 - Chai is a BDD / TDD assertion library for node and the browser that can be delightfully paired with any javascript testing framework - https://www.chaijs.com/
 
-ℹ️ Cypress bundles the Chai assertion library; Cypress uses Mocha under the hood so Cypress tests are written on top of Mocha's BDD interface adopting Mocha's BDD syntax 
+Command line
+
+- Run all the tests in headless mode: `npm test`
+
+- Run tests in parallel: `npm test --parallel` 
+
+ℹ️ Cypress 1) bundles the Chai assertion library; 2) uses Mocha under the hood so Cypress tests are written on top of Mocha's BDD interface adopting Mocha's BDD syntax; 3) is built on top of Mocha so the reporter built for Mocha is also used with Cypress. 
