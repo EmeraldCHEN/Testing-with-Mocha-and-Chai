@@ -6,9 +6,9 @@
  
 - [Chai](https://www.chaijs.com/) is a BDD / TDD assertion library for node and the browser that can be delightfully paired with any javascript testing framework
 
-Command line
+Running Tests
 
-- Install dependencies: `npm install`
+- Install dependencies before run tests: `npm install`
 
 - Run all the tests: `npm run test`
 
