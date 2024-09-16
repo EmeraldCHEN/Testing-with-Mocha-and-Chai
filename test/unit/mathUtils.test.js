@@ -32,6 +32,10 @@ describe('Math Utils', function() {
     it('should handle large numbers correctly', function() {
       expect(add(1e+20, 1e+20)).to.equal(2e+20);
     })
+    
+    it('should add two floating point numbers correctly', function() {
+      expect(add(1.1, 2.2)).to.be.closeTo(3.3, 0.0001); // Using closeTo for floating point precision
+    });
   });
 
   describe('subtract()', function() {
@@ -63,5 +67,5 @@ describe('Math Utils', function() {
     it('should handle large numbers correctly', function() {
       expect(subtract(1e+20, 1e+19)).to.equal(9e+19);
     });
-    });
+  });
 });
