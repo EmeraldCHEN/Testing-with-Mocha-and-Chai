@@ -1,7 +1,7 @@
 const supertest = require('supertest');
 const { expect } = require('chai');
-
-const baseUrl = 'https://reqres.in/api';
+const config = require('../../config');
+const baseUrl = config.baseUrl;
 const request = supertest(baseUrl);
 
 describe('ReqRes API Tests', function() {

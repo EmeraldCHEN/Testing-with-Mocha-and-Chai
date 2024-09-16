@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "devDependencies": {
     "chai": "^4.5.0",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.4.5",
     "eslint": "^9.10.0",
     "mocha": "^10.7.3",
     "node-fetch": "^3.3.2",
@@ -10,8 +12,11 @@
     "supertest": "^7.0.0"
   },
   "scripts": {
+    "test": "mocha test/unit/*.test.js && cross-env NODE_ENV=test BASE_URL_TYPE=JPH mocha test/integration/jsonPlaceHolder.test.js && cross-env NODE_ENV=test BASE_URL_TYPE=RQ mocha test/integration/reqre.test.js",
     "test:unit": "mocha test/unit/*.test.js",
-    "test:integration": "mocha test/integration/*.test.js",
-    "test": "yarn test:unit && yarn test:integration"
+    "test:integration:JPH:dev": "cross-env NODE_ENV=dev BASE_URL_TYPE=JPH mocha test/integration/*.test.js",
+    "test:integration:JPH:test": "cross-env NODE_ENV=test BASE_URL_TYPE=JPH mocha test/integration/jsonPlaceHolder.test.js",
+    "test:integration:JPH:prod": "cross-env NODE_ENV=prod BASE_URL_TYPE=JPH mocha test/integration/*.test.js",
+    "test:integration:RQ:test": "cross-env NODE_ENV=test BASE_URL_TYPE=RQ mocha test/integration/reqre.test.js"
   }
 }

@@ -1,7 +1,7 @@
 const request = require('supertest');
 const { expect } = require('chai');
-
-const baseUrl = 'https://jsonplaceholder.typicode.com';
+const config = require('../../config');
+const baseUrl = config.baseUrl;
 
 describe('JSONPlaceholder API Integration Tests', function() {
   it('should fetch a list of posts', async function() {

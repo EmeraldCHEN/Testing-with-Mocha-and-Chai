@@ -10,10 +10,12 @@ Command line
 
 - Install dependencies: `npm install`
 
-- Run all the tests: `npm test`
+- Run all the tests: `npm run test`
 
-- Run tests in parallel: `npm test --parallel` 
+- Run tests in parallel: `npm run test --parallel` 
 
 - Run unit tests: `npm run test:unit`
 
-- Run integration tests: `npm run test:integration`
+- Run first integration test suite: `npm run test:integration:JPH:test`
+
+- Run second integration test suite: `npm run test:integration:RQ:test`
